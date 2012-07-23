@@ -1,0 +1,5 @@
+ometa Bar {
+    bar = "bar" -> 8,
+    topLevel = bar
+}
+

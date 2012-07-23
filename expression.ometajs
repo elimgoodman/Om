@@ -1,0 +1,4 @@
+ometa Expression {
+    dblEq = ``=='',
+    grammarsUsed = < dblEq (~'=' ~'\n' char)*:w dblEq > -> w.join(''),
+}

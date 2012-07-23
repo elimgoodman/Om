@@ -1,0 +1,5 @@
+- ``$letters'' for non-token strings?
+- what does @ do?
+- < $stuff > for...sets of things that go together in order?
+- ( $stuff ) for character sets
+

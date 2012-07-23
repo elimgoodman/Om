@@ -2,7 +2,9 @@ _ = require 'underscore'
 ometa = require 'ometajs'
 fs = require 'fs'
 
-project_root = "/Users/eli/dev/om_project/"
+expression_grammar = require './expression.ometajs'
+
+project_root = "./om_project/"
 grammars = {}
 
 grammar_dir = project_root + "/grammars"
@@ -17,5 +19,9 @@ _.each grammar_files, (grammar_file) ->
     _.extend grammars, grammar
 
 _.each expression_files, (expression_file) ->
-
+    filename = expression_dir + "/" + expression_file
+    expression = fs.readFileSync filename, 'UTF-8'
+    grammar = expression_grammar.Expression.matchAll expression, "grammarsUsed"
+    grammar_obj = grammars[grammar]
+    grammar_obj.matchAll expression, "topLevel"
 
