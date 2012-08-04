@@ -16,6 +16,11 @@ $(function(){
 
         $.post("/execute", params, function(data){
             output_mirror.setValue(data.output);
+            if(data.error != null) {
+                $("#error-message").html(data.error.message);
+                $("#error-line").html(data.error.line);
+                $("#error-offset").html(data.error.offset);
+            }
         }, "json");
     });
 });

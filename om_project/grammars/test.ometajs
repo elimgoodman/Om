@@ -1,4 +1,5 @@
 ometa Test {
-    foo = "foo" -> 7,
-    topLevel = foo
+	className = word,
+	class = "class" className:name ':',
+    topLevel = class
 }

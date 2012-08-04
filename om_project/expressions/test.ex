@@ -1,1 +1,1 @@
-==Test==
+class Author:

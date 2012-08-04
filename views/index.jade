@@ -12,12 +12,24 @@ html
         div#content
             span.label Expression
             button#execute Execute
-            textarea#expression
+            textarea#expression= expression
             div
                 label Grammar Used:
-                input#grammar-used
+                input#grammar-used(value=default_grammar)
+            div
+                label Error
+                div#error
+                    div
+                        label Message: 
+                        span#error-message
+                    div
+                        label Line: 
+                        span#error-line
+                    div
+                        label Offset: 
+                        span#error-offset
             span.label Grammar
-            textarea#grammar
+            textarea#grammar= grammar
             span.label Output
             textarea#output
 
